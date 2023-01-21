@@ -1,0 +1,92 @@
+
+/* smaller laptops */
+
+@media (max-width: 64em) {
+  html {
+    font-size: 60%;
+  }
+
+  .section-hero__price-and-button-container {
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+
+  .section-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heading-secondary {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-hero__description {
+    margin-bottom: 2rem;
+  }
+}
+
+/* smaller laptops & footer grid braks at this point */
+
+@media (max-width: 55em) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-nav {
+    width: 100vw;
+    right: -100vw;
+  }
+}
+
+/* smaller laptops/large tablets & footer grid braks at this point */
+
+
+@media (max-width: 47em) {
+  .section-features__features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* large phones/portrait */
+@media (max-width: 34em) {
+  html {
+    font-size: 55%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .secondary-nav {
+    display: none;
+    padding: 0;
+  }
+
+  .primary-header {
+    padding: 1.2rem 1rem;
+  }
+
+  .section-hero__cta-container {
+    /* both help to justify content to left*/
+    align-items: flex-start;
+    text-align: left;
+
+    margin: 1rem;
+  }
+}
+
+/* all other phones/small devices */
+
+@media (max-width: 25em) {
+
+  /* spreads cya form across page */
+  .section-form__cta-form-container {
+    border: none;
+    width: 100vh;
+    height: 100vh;
+  }
+
+  .section-form__cta-form {
+    padding: 3rem 3rem;
+    
+  }
+}

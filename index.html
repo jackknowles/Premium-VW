@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PAGE TITLE Below -->
+    <title>e-Golf | Premium Volkswagen</title>
+    <!-- Google font: Jost, similar to VW's typeface -->
+    <!-- Weights 200, 400, 500, 700 linked, other weights not used & no italic used in site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css files must stay in order general, style, responsive -->
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- header at the top of page, would lead to other parts of whole website -->
+      <div class="primary-header flex">
+        <!-- Logo, would link to a hompage -->
+        <a href="#" title="return to homepage"
+          ><img
+            src="./img/Header-logo.png"
+            class="logo primary-header__logo"
+            alt="logo"
+        /></a>
+        <!-- Hamburger -->
+        <button class="btn hamburger" type="button">
+          <div class="bar"></div>
+        </button>
+      </div>
+      <!-- collapsable navigation, to go to rest of the site -->
+      <nav class="nav main-nav">
+        <ul>
+          <li><a href="#" class="btn main-nav__btn">New cars</a></li>
+          <li><a href="#" class="btn main-nav__btn">Used cars</a></li>
+          <li>
+            <a href="#" class="btn main-nav__btn">Electric and hybrid</a>
+          </li>
+          <li><a href="#" class="btn main-nav__btn">Servicing</a></li>
+          <li><a href="#" class="btn main-nav__btn">Finance</a></li>
+          <li><a href="#" class="btn main-nav__btn">Find a dealership</a></li>
+          <li><a href="#" class="btn main-nav__btn">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- sits beneath main header -->
+    <section class="secondary-header grid">
+      <h1 class="heading-primary">VW e-Golf</h1>
+
+      <!-- Navigation for the page, hidden on small screens -->
+      <nav class="secondary-nav">
+        <ul class="secondary-nav__list flex">
+          <li>
+            <a href="#gallery" class="secondary-nav__btn">Gallery </a>
+          </li>
+          <li>
+            <a href="#features" class="secondary-nav__btn">Key Features </a>
+          </li>
+          <li>
+            <a href="#footer" class="secondary-nav__btn"> Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+
+
+    <!-- Hero with photos, description and cta -->
+    <!-- helper classes to make into 2 col grid -->
+    <!-- collapses on smaller screen to 1 col -->
+    <section class="section-hero grid grid-2-cols" id="section">
+      <!-- in a container to allow for swapping images -->
+      <!-- image swap not coded at this time -->
+      <div class="section-hero__img-container">
+        <picture>
+
+          <!-- webp to be used if browser can, smaller file size, otherwise png -->
+          <!-- Top file is smaller, triggered for use on smaller screens to save high downloads -->
+          <source media="(max-width:34em)" srcset="./img/e-golf-small-01.webp">
+          <source srcset="./img/e-golf-large-01.webp" type="image/webp" />
+          <source srcset="./img/e-golf-large-01.png" type="image/png" />
+
+          <!-- v old broswers cant recognise picture tag -->
+          <!-- use this image instead, png so supported by all -->
+          <img
+            src="./img/e-golf-large-01.png"
+            alt="e-Golf exterior front"
+            class="section-hero__image"
+          />
+        </picture>
+      </div>
+
+      <div class="section-hero__cta-container flex">
+        <h2 class="heading-secondary">About the e-Golf</h2>
+
+        <!-- description removed on smaller screens -->
+        <p class="section-hero__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eos
+          quibusdam aperiam assumenda, dolorum vel incidunt nisi reiciendis ea
+          minima.
+        </p>
+
+        <div class="section-hero__price-and-button-container flex">
+          <p class="section-hero__price">
+            On the road from <strong>£25,700</strong>
+          </p>
+
+          <button class="section-hero__btn-cta cta-btn">Book test drive</button>
+        </div>
+      </div>
+    </section>
+
+<!-- FORM -->
+    <section class="section-form flex section-form--unclicked">
+      <!-- no action on from as not linked to anything -->
+      <div class="section-form__cta-form-container">
+        <div class="section-form__close-btn-container">
+          <button class="section-form__close-btn">close</button>
+        </div>
+
+        <form class="section-form__cta-form" name="test-drive-form">
+          <div class="section-form__form-pair">
+            <label for="full-name">Full name</label>
+            <input required id="full-name" type="text" placeholder="Car Buyer" name="full-name"/>
+          </div>
+          
+          <div class="section-form__form-pair">
+            <label for="phone">Phone number</label>
+            <input required id="phone" type="text" placeholder="07444444111" name="phone"/>
+          </div>
+          
+          <div class="section-form__form-pair">
+            <label for="email">Email address</label>
+            <input required id="email" type="email" placeholder="carbuyer@premiumVW.com" name="email"/>
+          </div>
+          
+          <div class="section-form__form-pair">
+            <label for="dealership">Nearest dealership</label>
+            <select required id="dealership" name="dealership">
+              <option value="Coventry">Coventry</option>
+              <option value="Birmingham">Birmingham</option>
+              <option value="Warsaw">Warsaw</option>
+            </select>
+          </div>
+          
+          <button class="section-form__submit-btn btn-cta">Submit</button>
+        </div>
+      </form>
+
+    </section>
+
+    <section class="section-features" id="features">
+      <div class="section-container">
+
+        <!-- heading in container for spacing -->
+        <div class="heading-container">
+          <h3 class="heading-tertiary section-features__heading">Features</h3>
+        </div>
+
+        <!-- grid starts here - grid squares referred to as tiles -->
+        <div class="section-features__features-grid grid grid-3-cols">
+          
+          <!-- tile 1 -->
+          <div>
+            <ion-icon
+              name="speedometer"
+              class="section-features__icon"
+            ></ion-icon>
+            <h4 class="section-features__tile-heading">
+              Good Performance
+            </h4>
+            <p class="section-features__tile-description">
+              Get from 0-60 mph in under 9.3 seconds
+            </p>
+          </div>
+
+          <!-- tile 2 -->
+          <div>
+            <ion-icon name="power" class="section-features__icon"></ion-icon>
+            <h4 class="section-features__tile-heading">
+              Convenient charging
+            </h4>
+            <p class="section-features__tile-description">
+              Charge from 0-100% in 45 mins (fast charger)
+            </p>
+          </div>
+
+          <!-- tile 3 -->
+          <div>
+            <ion-icon
+              name="analytics"
+              class="section-features__icon"
+            ></ion-icon>
+            <h4 class="section-features__tile-heading">Great range</h4>
+            <p class="section-features__tile-description">
+              An 83 - 125 mile range, perfect for commuters
+            </p>
+          </div>
+
+          <!-- tile 4 -->
+          <div>
+            <ion-icon name="wallet" class="section-features__icon"></ion-icon>
+            <h4 class="section-features__tile-heading">Save money</h4>
+            <p class="section-features__tile-description">
+              Pay £0 in road tax, as well as saving on fuel
+            </p>
+          </div>
+
+          <!-- tile 5 -->
+          <div>
+            <ion-icon name="people" class="section-features__icon"></ion-icon>
+            <h4 class="section-features__tile-heading">
+              A Spacious small car
+            </h4>
+            <p class="section-features__tile-description">
+              Comfortably fit up to 5 occupants
+            </p>
+          </div>
+
+          <!-- tile 6 -->
+          <div>
+            <ion-icon name="leaf" class="section-features__icon"></ion-icon>
+            <h4 class="section-features__tile-heading">Eco-friendly</h4>
+            <p class="section-features__tile-description">
+              The e-Golf produces no CO2 whilst driving
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer starts here -->
+    <footer class="footer" id="footer">
+
+      <!-- container to keep consistency -->
+      <div class="footer-container">
+
+        <!-- footer held in grid 2 larger cols and 2 smaller -->
+        <div class="footer-grid grid grid-4-cols--2-lrg-2-sml">
+          
+          <!-- Logo, social icons, copyright -->
+          <div class="footer__logo-col footer-flex">
+            <a href="#">
+              <img
+              class="logo footer__logo"
+              alt="Omnifood logo"
+              src="./img/Header-logo.png"
+              />
+            </a>
+
+            <!-- list of icons for links to social pages -->
+            <ul class="footer__social-links flex">
+              <li>
+                <a href="https://www.instagram.com">
+                  <ion-icon class="footer__social-icon" name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.facebook.com">
+                 <ion-icon class="footer__social-icon" name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+              <a href="https://www.twitter.com">
+                <ion-icon class="footer__social-icon" name="logo-twitter"></ion-icon>
+             </a>
+            </li>
+          </ul>
+          
+          <p class="footer__copyright">
+            Copyright &copy; 2023 Jack Knowles. Designed and developed by Jack
+            Knowles as interview project. Not for commerical use or reuse.
+          </p>
+
+        </div>
+        
+        <div class="footer-flex">
+          <p class="footer__heading">Contact us</p>
+
+          <!-- address tag used for semantics & screen readers-->
+          <address class="footer__contacts footer-flex">
+            <p>
+              Premium VW, 205 Montgomery Road, Covenchesterford, MV00 0ZZ</p>
+            <p>
+              <a class="footer-link" href="tel:+44 (0111) 0111 4567"
+              >(0111) 123 4567</a
+              >
+              <br />
+
+              <!-- links to my email -->
+              <a class="footer-link" href="mailto:jknowles.webdev@gmail.com"
+              >info@premiumVW.xom</a
+              >
+            </p>
+          </address>
+        </div>
+        
+        <!-- generic foot links -->
+        <nav class="footer-flex">
+          <p class="footer__heading">Accounts</p>
+          <ul class="footer-flex">
+            <li><a class="footer__link" href="#">Create account</a></li>
+            <li><a class="footer__link" href="#">Sign in</a></li>
+            <li><a class="footer__link" href="#">iOS app</a></li>
+            <li><a class="footer__link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        
+        <!-- generic foot links -->
+        <nav class="footer-flex">
+          <p class="footer__heading">Company</p>
+          <ul class="footer-flex">
+            <li><a class="footer__link" href="#">About Premium VW</a></li>
+            <li><a class="footer__link" href="#">For Business</a></li>
+            <li><a class="footer__link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+    
+    <!-- Link to JS file -->
+    <script src="./js/main.js"></script>
+    <!-- IonIcon script -->
+    <script
+    type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+    </body>
+</html>

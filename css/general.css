@@ -1,0 +1,160 @@
+/* ***************** */
+/* 01 STYLING RESETS - removes defaults */
+/* ***************** */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* makes 1 rem = 10px, still adjustable by user though */
+  font-size: 62.5%;
+
+  /* smooths click to scroll nav scrolling */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Jost", Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #000;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+button,
+a {
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Creates an outline on focused items to help those tabbing through screen - offset for design only */
+/* also does an outline on buttons, but doesn't look too good on hambrger right now */
+a:focus,
+button:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline-offset: 0.6rem;
+}
+
+/* ****************************** */
+/* 02 - General Style to be used  */
+/* ****************************** */
+
+/* HEADINGS */
+
+/* Main heading */
+.heading-primary {
+  font-weight: 700;
+  min-width: 18rem;
+  font-size: 3.6rem;
+  white-space: nowrap;
+}
+
+/* h2 */
+.heading-secondary {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1.5;
+}
+
+/* h3 */
+.heading-tertiary {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1.5;
+  margin: 1.6rem 0 6.4rem;
+}
+
+/* h4 */
+.heading-quaternary {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.logo {
+  /* Keeps both footer and header logo small */
+  max-height: 4.5rem;
+}
+
+/* ******************* */
+/* 03 - Layouts ****** */
+/* ******************* */
+
+/* these are just helper classes, more customisation fo flexes/grids happens later */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-cols--2-lrg-2-sml {
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+}
+
+/* used to standardise sections and centralise content */
+.section-container {
+  padding: 4.8rem 0 6.4rem;
+
+  /* helps adjust to different screen sizes */
+  max-width: 95rem;
+  margin: 0 auto;
+}
+
+/* used to standardise and centralise headings, easy screen size changes too */
+.heading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.2rem;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
